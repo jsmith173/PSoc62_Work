@@ -710,14 +710,15 @@
                     </Personality>
                 </Block>
                 <Block location="tcpwm[0].cnt[0]">
+                    <Alias value="CYBSP_TIMER"/>
                     <Personality template="mxs40timercounter" version="1.0">
                         <Param id="ClockPrescaler" value="CY_TCPWM_COUNTER_PRESCALER_DIVBY_1"/>
                         <Param id="RunMode" value="CY_TCPWM_COUNTER_CONTINUOUS"/>
                         <Param id="CountDirection" value="CY_TCPWM_COUNTER_COUNT_UP"/>
-                        <Param id="Period" value="32768"/>
-                        <Param id="CompareOrCapture" value="CY_TCPWM_COUNTER_MODE_CAPTURE"/>
+                        <Param id="Period" value="200000"/>
+                        <Param id="CompareOrCapture" value="CY_TCPWM_COUNTER_MODE_COMPARE"/>
                         <Param id="EnableCompareSwap" value="false"/>
-                        <Param id="Compare0" value="16384"/>
+                        <Param id="Compare0" value="100000"/>
                         <Param id="Compare1" value="16384"/>
                         <Param id="CaptureInput" value="CY_TCPWM_INPUT_DISABLED"/>
                         <Param id="InterruptSource" value="CY_TCPWM_INT_ON_TC"/>
